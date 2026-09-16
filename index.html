@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ</title>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- ヘッダー -->
+    <header class="bg-purple-500 text-white py-8 text-center">
+    <h1 class="text-3xl font-bold">~ あやのポートフォリオ ~</h1>
+    <p class="mt-2 text-indigo-100">POSSEでプログラミングを学んでいます</p>
+    </header>
+    
+    <main class="max-w-3xl mx-auto px-4 py-12 space-y-16">
+
+    <!-- 自己紹介 -->
+    <section>
+        <h2 class="text-2xl font-bold mb-4">自己紹介</h2>
+        <p class="text-gray-600 leading-relaxed">こんにちは！POSSE①7期の大辻采佳です。Web制作を学んでいます。</p>
+    </section>
+
+    <!-- スキルリスト -->
+    <section>
+        <h2 class="text-2xl font-bold mb-4">スキル</h2>
+        <ul class="flex flex-wrap gap-2">
+            <li class="transition-all duration-300 ease-in-out hover:scale-105
+            bg-indigo-100 text-purple-700 px-3 py-1 rounded-full text-sm">HTML</li>
+        <li class="transition-all duration-300 ease-in-out hover:scale-105
+        bg-indigo-100 text-purple-700 px-3 py-1 rounded-full text-sm">Tailwind CSS</li>
+        <li class="transition-all duration-300 ease-in-out hover:scale-105
+        bg-indigo-100 text-purple-700 px-3 py-1 rounded-full text-sm">JavaScript</li>
+    </ul>
+    </section>
+
+    <!-- 作品スライダー -->
+    <section>
+        <h2 class="text-2xl font-bold mb-4">作品 ★</h2>
+        <section class="splide" id="work-slider" aria-label="作品スライダー">
+        <div class="splide__track">
+            <ul class="splide__list">
+            <li class="splide__slide">
+                <img src="カフェメニュー.png" alt="作品1"
+                class="w-full rounded-lg object-cover">
+            </li>
+            <li class="splide__slide">
+                <img src="BMI 計算ツール.png" alt="作品2"
+                class="w-full rounded-lg object-cover">
+            </li>
+            <li class="splide__slide">
+                <img src="商品一覧ページ.jpeg" alt="作品1"
+                class="w-full rounded-lg object-cover">
+            </li>
+            <li class="splide__slide">
+                <img src="会員登録フォーム.jpeg" alt="作品1"
+                class="w-full rounded-lg object-cover">
+            </li>
+            <li class="splide__slide">
+                <img src="TO-DOリスト.jpeg" alt="作品1"
+                class="w-full rounded-lg object-cover">
+            </li>
+            <li class="splide__slide">
+                <img src="一覧表 (エージェント一覧).jpeg" alt="作品1"
+                class="w-full rounded-lg object-cover">
+            </li>
+        </ul>
+        </div>
+        </section>
+    </section>
+
+</main>
+<footer class="bg-gray-800 text-gray-400 text-center py-6 mt-16">
+    <p>2026 あや</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        new Splide('#work-slider', {
+            type: 'loop',
+            gap: '1rem',
+            autoplay: true,
+            interval: 3000,
+        }).mount();
+    });
+</script>
+</html>
